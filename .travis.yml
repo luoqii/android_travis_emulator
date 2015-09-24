@@ -1,13 +1,20 @@
+#http://docs.travis-ci.com/user/languages/android/#stq=&stp=0
 language: android
 jdk: oraclejdk7
 env:
   matrix:
-    - ANDROID_TARGET=android-8  ANDROID_ABI=armeabi-v7a
-    - ANDROID_TARGET=android-9  ANDROID_ABI=armeabi-v7a
-    - ANDROID_TARGET=android-10  ANDROID_ABI=armeabi-v7a
-    - ANDROID_TARGET=android-11  ANDROID_ABI=armeabi-v7a
-    - ANDROID_TARGET=android-12  ANDROID_ABI=armeabi-v7a
-    - ANDROID_TARGET=android-13  ANDROID_ABI=armeabi-v7a
+    #- ANDROID_TARGET=android-8  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-8  ANDROID_ABI=armeabi
+    #- ANDROID_TARGET=android-9  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-9  ANDROID_ABI=armeabi
+    #- ANDROID_TARGET=android-10  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-10  ANDROID_ABI=armeabi
+    #- ANDROID_TARGET=android-11  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-11  ANDROID_ABI=armeabi
+    #- ANDROID_TARGET=android-12  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-12  ANDROID_ABI=armeabi
+    #- ANDROID_TARGET=android-13  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-13  ANDROID_ABI=armeabi
     - ANDROID_TARGET=android-14  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-15  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-16  ANDROID_ABI=armeabi-v7a
@@ -25,19 +32,19 @@ android:
     - build-tools-23
     
     - android-8
-    - sys-img-armeabi-v7a-android-8
+    - sys-img-armeabi-android-8
     - sys-img-x86-android-8
     - android-9
-    - sys-img-armeabi-v7a-android-9
+    - sys-img-armeabi-android-9
     - sys-img-x86-android-9
     - android-10
-    - sys-img-armeabi-v7a-android-10
+    - sys-img-armeabi-android-10
     - sys-img-x86-android-10
     - android-11
-    - sys-img-armeabi-v7a-android-11
+    - sys-img-armeabi-android-11
     - sys-img-x86-android-11
     - android-12
-    - sys-img-armeabi-v7a-android-12
+    - sys-img-armeabi-android-12
     - sys-img-x86-android-12
     - android-13
     - sys-img-armeabi-v7a-android-13
@@ -74,6 +81,9 @@ before_script:
   # Create and start emulator
   - echo PATH $PATH
   - android list target
+  - uname -a
+  - df -h
+  - cat /proc/cpuinfo | grep process
   - echo ANDROID_TARGET: $ANDROID_TARGET ANDROID_ABI: $ANDROID_ABI
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
