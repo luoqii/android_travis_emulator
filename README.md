@@ -3,3 +3,4 @@
 start emulator in travis.
 
 ?how to debug this build?
+can just push commit to trigger it??
