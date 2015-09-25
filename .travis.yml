@@ -3,6 +3,10 @@ language: android
 jdk: oraclejdk7
 env:
   matrix:
+    - ANDROID_TARGET=android-4  ANDROID_ABI=armeabi
+    - ANDROID_TARGET=android-5  ANDROID_ABI=armeabi
+    - ANDROID_TARGET=android-6  ANDROID_ABI=armeabi
+    - ANDROID_TARGET=android-7  ANDROID_ABI=armeabi
     #- ANDROID_TARGET=android-8  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-8  ANDROID_ABI=armeabi
     #- ANDROID_TARGET=android-9  ANDROID_ABI=armeabi-v7a
