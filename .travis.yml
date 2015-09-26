@@ -35,6 +35,14 @@ android:
   #  - build-tools-19.0.0
     - build-tools-23
     
+    - android-4
+    - sys-img-armeabi-android-4
+    - android-5
+    - sys-img-armeabi-android-5
+    - android-6
+    - sys-img-armeabi-android-6
+    - android-7
+    - sys-img-armeabi-android-7
     - android-8
     - sys-img-armeabi-android-8
     #- sys-img-x86-android-8
