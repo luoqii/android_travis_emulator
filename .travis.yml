@@ -96,6 +96,7 @@ before_script:
   - android list target
   
   - android list sdk
+  - which android-update-sdk
   - cat `which android-update-sdk`
   - android-update-sdk
   
