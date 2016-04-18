@@ -106,7 +106,7 @@ before_script:
   - android list sdk --all --extended
 # install other componets.
 #  - android-update-sdk --components=build-tools-21.1.1
-  - android list sdk --all --extended | grep id:
+#  - android list sdk --all --extended | grep id:
   
   - uname -a
   - df -h
