@@ -1,7 +1,11 @@
 #http://docs.travis-ci.com/user/languages/android/#stq=&stp=0
 sudo: false
 language: android
-jdk: oraclejdk7
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk7
+  - openjdk6
 env:
   matrix:
     - ANDROID_TARGET=android-4  ANDROID_ABI=armeabi
