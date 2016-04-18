@@ -104,7 +104,9 @@ before_script:
   - cat `which android-update-sdk`
   - android-update-sdk
   - android list sdk --all --extended
-  - android-update-sdk --components=build-tools-21.1.1
+# install other componets.
+#  - android-update-sdk --components=build-tools-21.1.1
+  - android list sdk --all --extended | grep id:
   
   - uname -a
   - df -h
