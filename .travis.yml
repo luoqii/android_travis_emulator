@@ -99,6 +99,7 @@ before_script:
   - which android-update-sdk
   - cat `which android-update-sdk`
   - android-update-sdk
+  - android list sdk --all --extended
   
   - uname -a
   - df -h
