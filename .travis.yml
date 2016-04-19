@@ -36,7 +36,7 @@ env:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-22  ANDROID_ABI=armeabi-v7a
     # no android-23 yet 20150925
-    #- ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-23  ANDROID_ABI=armeabi-v7a
 
 android:
   components:
