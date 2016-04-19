@@ -2,10 +2,10 @@
 sudo: false
 language: android
 jdk:
-  - oraclejdk8
+#  - oraclejdk8
   - oraclejdk7
-  - openjdk7
-  - openjdk6
+#  - openjdk7
+#  - openjdk6
 env:
   matrix:
     - ANDROID_TARGET=android-4  ANDROID_ABI=armeabi
@@ -18,6 +18,8 @@ env:
     - ANDROID_TARGET=android-9  ANDROID_ABI=armeabi
     #- ANDROID_TARGET=android-10  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-10  ANDROID_ABI=armeabi
+    
+    # 11, 12, 13, 14 often fail.
     #- ANDROID_TARGET=android-11  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-11  ANDROID_ABI=armeabi
     #- ANDROID_TARGET=android-12  ANDROID_ABI=armeabi-v7a
@@ -25,6 +27,7 @@ env:
     #- ANDROID_TARGET=android-13  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-13  ANDROID_ABI=armeabi
     - ANDROID_TARGET=android-14  ANDROID_ABI=armeabi-v7a
+    
     - ANDROID_TARGET=android-15  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-16  ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-17  ANDROID_ABI=armeabi-v7a
