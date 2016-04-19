@@ -93,6 +93,9 @@ android:
     - android-22
     - sys-img-armeabi-v7a-android-22
     #- sys-img-x86-android-22
+    - android-23
+    - sys-img-armeabi-v7a-android-23
+    #- sys-img-x86-android-23
 
 before_script:
   # Create and start emulator
@@ -122,4 +125,4 @@ before_script:
   - adb shell input keyevent 82 &
   
 
-script: adb shell monkey -p com.android.launcher -v 77 --throttle 200
+script: adb shell monkey -p com.android.launcher -v 7777 --throttle 200
